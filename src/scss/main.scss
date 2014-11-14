@@ -204,6 +204,13 @@ img.jcrop-preview {
 
 #fileImg {
     position: absolute;
+    left: 180px;
+    bottom: 10px;
+    // display: none;
+}
+
+#coordsImg {
+    position: absolute;
     left: 10px;
     bottom: 10px;
     // display: none;
