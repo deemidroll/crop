@@ -5,7 +5,7 @@
     "latedef": true,
     "quotmark": true,
     "undef": true,
-    "predef": ["window", "document"],
+    "predef": ["window", "document", "$"],
     "unused": true,
     "trailing": true
 }

@@ -8,9 +8,14 @@
         <link rel="stylesheet" href="./css/app.css" />
     </head>
     <body>
-        <p>If you watch this message, gulp task 'markup' is working!</p>
-        <p>Look at console and check if gulp task 'browserify' is working</p>
-        <p class="check-gulp-scss-task">If this message is red, gulp task 'sass' is working</p>
+        <div class="cropper">
+            <img src="" alt="" id="jcropTarget">
+            <input id="fileImg" type="file" name="fileImg" value="">
+            <button id="selectImg" class="btn btn-default">Выбрать изображение</button>
+            <button id="uploadImg" class="btn btn-default">Загрузить изображение</button>
+        </div>
+        <script src="./js/jquery-1.11.1.min.js"></script>
+        <script src="./js/jquery.Jcrop.min.js"></script>
         <script src="./js/app.js"></script>
     </body>
 </html>
