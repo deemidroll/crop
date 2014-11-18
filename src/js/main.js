@@ -18,10 +18,14 @@ $(function () {
     }
 
     function setCoords(c) {
-        data.x = c.x;
-        data.y = c.y;
-        data.w = c.w;
-        data.h = c.h;
+        var naturalW = $jcropTarget[0].width,
+            dispalyW = $jcropTarget.width(),
+            rate = naturalW/dispalyW;
+
+        data.x = c.x * rate;
+        data.y = c.y * rate;
+        data.w = c.w * rate;
+        data.h = c.h * rate;
         $inputCoords[0].value = JSON.stringify(data);
     }
 
@@ -35,7 +39,6 @@ $(function () {
             var imgW = $jcropTarget.width();
 
             $jcropTarget.Jcrop({
-                onChange: setCoords,
                 onSelect: setCoords,
                 aspectRatio: 4/3,
                 setSelect: [((imgW/2)-60), 60, ((imgW/2)+60), 220 ],
